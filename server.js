@@ -13,7 +13,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Load the service account key manually from file
-const serviceAccountPath = path.join(__dirname, 'config/enabled-74da5-firebase-adminsdk-fbsvc-8721e2de98.json');
+const serviceAccountPath = path.join(__dirname, process.env.GOOGLE_APPLICATION_CREDENTIALS);
 const serviceAccount = JSON.parse(fs.readFileSync(serviceAccountPath, 'utf-8'));
 
 admin.initializeApp({

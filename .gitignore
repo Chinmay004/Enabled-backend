@@ -6,3 +6,4 @@ firebase-debug.log
 firebase-debug.*
 .DS_Store
 .vscode/
+config/*.json
