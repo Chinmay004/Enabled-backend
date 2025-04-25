@@ -1,0 +1,461 @@
+[
+  {
+    "name": "Suction Machine",
+    "image": "https://res.cloudinary.com/drkxelewr/image/upload/v1744748515/medical-equipments/Suction_Machine_ncvxbb.png",
+    "price": 1200000,
+    "description": "Removes fluids like mucus from the airway. Essential for patients with respiratory issues.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Trach Strap",
+    "image": "https://res.cloudinary.com/drkxelewr/image/upload/v1744748748/medical-equipments/Trach_Strap_ktmdcc.png",
+    "price": 92000,
+    "description": "Secures a tracheostomy tube comfortably. Prevents accidental displacement during use.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 10
+  },
+  {
+    "name": "Nebulizer",
+    "image": "https://res.cloudinary.com/drkxelewr/image/upload/v1744748868/medical-equipments/Neubilizer_mocsgh.png",
+    "price": 2355000,
+    "description": "Delivers medication directly to lungs in mist form. Ideal for asthma and COPD treatment.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Feeding burette",
+    "image": "https://res.cloudinary.com/drkxelewr/image/upload/v1744748915/medical-equipments/Feeding_Burette_q6ofer.png",
+    "price": 260000,
+    "description": "Used to administer accurate fluid volumes intravenously. Crucial in pediatric and critical care.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 600
+  },
+  {
+    "name": "Alcohol Swab",
+    "image": "https://res.cloudinary.com/drkxelewr/image/upload/v1744748940/medical-equipments/Alcohol_Swab_xgbksr.png",
+    "price": 10500,
+    "description": "Sterile pad with alcohol for skin disinfection. Used before injections or procedures.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 12
+  },
+  {
+    "name": "Suprasorb P Non Adhesive",
+    "image": "https://res.cloudinary.com/drkxelewr/image/upload/v1744748977/medical-equipments/Suprasorb_P_Non_Adhesive_gchlib.png",
+    "price": 109500,
+    "description": "Soft foam dressing for wound management. Absorbs exudate while preventing adhesion.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 120
+  },
+  {
+    "name": "Hand sanitizer",
+    "image": "https://res.cloudinary.com/drkxelewr/image/upload/v1744748998/medical-equipments/Hand_Sanitizer_p1rgji.png",
+    "price": 140000,
+    "description": "Alcohol-based gel for hand hygiene. Reduces microbial presence without water.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 12
+  },
+  {
+    "name": "NaCl",
+    "image": "https://res.cloudinary.com/drkxelewr/image/upload/v1744749041/medical-equipments/NaCl_suae9h.png",
+    "price": 210877,
+    "description": "Sterile saline solution for irrigation or IV use. Maintains fluid and electrolyte balance.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 12
+  },
+  {
+    "name": "HME",
+    "image": "https://res.cloudinary.com/drkxelewr/image/upload/v1744749063/medical-equipments/HME_Heat_Moisture_Exchanger_blysgh.png",
+    "price": 105000,
+    "description": "Heat and moisture exchanger for ventilators. Helps retain warmth and humidity in breathing circuits.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 120
+  },
+  {
+    "name": "Mask",
+    "image": "https://res.cloudinary.com/drkxelewr/image/upload/v1744749096/medical-equipments/Mask_a4ckfi.png",
+    "price": 50000,
+    "description": "Protective face covering against airborne particles. Used in surgeries and general care.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 12
+  },
+  {
+    "name": "Scissors",
+    "image": "https://res.cloudinary.com/drkxelewr/image/upload/v1744749124/medical-equipments/Scissors_ktlwix.png",
+    "price": 108737,
+    "description": "Used for cutting dressings, sutures or tissue. Precision instrument for clinical use.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Syringe with needle",
+    "image": "https://res.cloudinary.com/drkxelewr/image/upload/v1744749148/medical-equipments/Syringe_with_needle_wqph1l.png",
+    "price": 80000,
+    "description": "Device for injecting medications or drawing fluids. Common in all medical settings.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Cotton Swab Sterile",
+    "image": "",
+    "price": 79999,
+    "description": "Used for wound cleaning and sample collection. Sterile and disposable for hygiene.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 4
+  },
+  {
+    "name": "Hygrometer",
+    "image": "",
+    "price": 28200,
+    "description": "Measures humidity in the environment. Helps monitor optimal conditions for care.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Battery",
+    "image": "",
+    "price": 5600000,
+    "description": "Power source for portable medical equipment. Ensures uninterrupted operation during use.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Biohazard Container",
+    "image": "",
+    "price": 35000,
+    "description": "Safe disposal container for infectious waste. Prevents contamination and infection spread.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Sterile Gauze",
+    "image": "",
+    "price": 9900,
+    "description": "Used to cover and protect wounds. Absorbs exudate and prevents infection.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 36
+  },
+  {
+    "name": "Suction Connection Tube",
+    "image": "",
+    "price": 12900,
+    "description": "Connects suction equipment to patients. Ensures effective airway clearance.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Oxygen Tank",
+    "image": "",
+    "price": 369999,
+    "description": "Stores and supplies oxygen for patients. Critical for respiratory emergencies and care.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Ventilator",
+    "image": "",
+    "price": 95000000,
+    "description": "Supports or replaces spontaneous breathing. Used in intensive and critical care units.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Oximeter",
+    "image": "",
+    "price": 3800000,
+    "description": "Measures blood oxygen saturation and pulse rate. Non-invasive and quick monitoring tool.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Micropore",
+    "image": "",
+    "price": 50000,
+    "description": "Breathable adhesive tape for dressings. Gentle on skin and secure for long wear.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 4
+  },
+  {
+    "name": "Trach Vent T",
+    "image": "",
+    "price": 22500,
+    "description": "Tracheostomy accessory for humidified oxygen delivery. Enhances patient comfort.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 120
+  },
+  {
+    "name": "Hypafix",
+    "image": "",
+    "price": 198000,
+    "description": "Secure dressing fixation adhesive. Conforms to body contours for patient mobility.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 24
+  },
+  {
+    "name": "Mucus Extractor",
+    "image": "",
+    "price": 12000,
+    "description": "Removes mucus from airways in infants. Ensures clear breathing and comfort.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 5
+  },
+  {
+    "name": "Lubricant Gel",
+    "image": "",
+    "price": 51500,
+    "description": "Water-soluble gel for medical instrument insertion. Reduces friction and irritation.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 4
+  },
+  {
+    "name": "Vaseline",
+    "image": "",
+    "price": 37900,
+    "description": "Petroleum jelly for skin protection. Prevents dryness and irritation in patients.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Underpad",
+    "image": "",
+    "price": 28500,
+    "description": "Absorbent sheet placed under patients. Protects bedding and surfaces from fluids.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 48
+  },
+  {
+    "name": "Trach Portex Size 6",
+    "image": "",
+    "price": 1993005,
+    "description": "Tracheostomy tube of size 6 for airway access. Designed for long-term use.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 12
+  },
+  {
+    "name": "Trach Portex Size 7.5",
+    "image": "",
+    "price": 891610,
+    "description": "Size 7.5 tracheostomy tube for airway management. Ensures optimal ventilation.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 12
+  },
+  {
+    "name": "NGT Silicone Feeding Tube",
+    "image": "",
+    "price": 245000,
+    "description": "Flexible tube for enteral feeding. Ideal for long-term nutritional support.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 12
+  },
+  {
+    "name": "NGT Non Silicone Feeding Tube",
+    "image": "",
+    "price": 52500,
+    "description": "Non-silicone variant for short-term feeding. Cost-effective and disposable.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 52
+  },
+  {
+    "name": "Syringe without Needle 1 CC (50 PC)",
+    "image": "",
+    "price": 449000,
+    "description": "Used to deliver precise medication dosages. Needle-free for versatility.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Syringe without Needle 1 CC (100 PC)",
+    "image": "",
+    "price": 48000,
+    "description": "Bulk pack for repetitive clinical use. Ensures sterile administration.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Syringe without Needle 3 CC (100 PC)",
+    "image": "",
+    "price": 50000,
+    "description": "3ml volume for multiple uses. Ideal for drawing or dispensing liquids.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Syringe without Needle 5 CC (100 PC)",
+    "image": "",
+    "price": 2500,
+    "description": "5ml syringe for accurate dosing. Widely used in hospitals and labs.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 12
+  },
+  {
+    "name": "Syringe without Needle 20 CC (50 PC)",
+    "image": "",
+    "price": 224100,
+    "description": "20ml syringe without needle for large volume meds. Used in IV and irrigation.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 12
+  },
+  {
+    "name": "Syringe without Needle 50 CC",
+    "image": "",
+    "price": 35000,
+    "description": "50ml syringe for high volume procedures. Ideal for wound irrigation.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 12
+  },
+  {
+    "name": "Syringe without Needle 100 CC",
+    "image": "",
+    "price": 17000,
+    "description": "High-capacity syringe for fluid removal or transfer. Durable and clear.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 12
+  },
+  {
+    "name": "Syringe with needle 1 CC",
+    "image": "",
+    "price": 253000,
+    "description": "Small capacity syringe with needle. Used in vaccinations and pediatric care.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Syringe with needle 100 CC",
+    "image": "",
+    "price": 33333,
+    "description": "High-capacity syringe with needle. Designed for large fluid administration.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Syringe with needle 3 CC",
+    "image": "",
+    "price": 85000,
+    "description": "Most common size for injections. Balanced for accuracy and ease of use.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Syringe with needle 5 CC",
+    "image": "",
+    "price": 1500,
+    "description": "Mid-range capacity syringe with needle. Suitable for intramuscular injections.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Syringe with needle 10 CC",
+    "image": "",
+    "price": 4000,
+    "description": "Used for fluid extraction or medicine injection. Provides larger dose options.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Suction Catheter",
+    "image": "",
+    "price": 334000,
+    "description": "Flexible tube for airway suctioning. Helps in secretion removal and ventilation.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 48
+  },
+  {
+    "name": "Ambu Bag Infants",
+    "image": "",
+    "price": 415000,
+    "description": "Manual resuscitator for infants. Used in emergency respiratory support.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Ambu Bag Pediatrics",
+    "image": "",
+    "price": 445000,
+    "description": "Hand-held device for ventilating pediatric patients. Ensures oxygenation in crises.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Ambu Bag Adults",
+    "image": "",
+    "price": 485000,
+    "description": "Resuscitation device for adults. Delivers breaths manually in emergency situations.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 1
+  },
+  {
+    "name": "Mucus Extractor 8",
+    "image": "",
+    "price": 4600,
+    "description": "Size 8 mucus extractor for infants. Clears airways during suctioning.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 5
+  },
+  {
+    "name": "Mucus Extractor 10",
+    "image": "",
+    "price": 5550,
+    "description": "Medium-sized extractor for safe suction. Ensures comfort and hygiene.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 5
+  },
+  {
+    "name": "Mucus Extractor 14",
+    "image": "",
+    "price": 5700,
+    "description": "Larger extractor for effective suctioning. Suitable for older children or adults.",
+    "category": "",
+    "countInStock": null,
+    "yearlyLimitPerUser": 5
+  }
+]
