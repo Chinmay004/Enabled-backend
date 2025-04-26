@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+dotenv.config();
 import connectDB from './config/db.js';
 import admin from 'firebase-admin';
 import fs from 'fs';
@@ -20,7 +21,6 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 
-dotenv.config();
 connectDB();
 // importData();
 
