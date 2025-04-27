@@ -15,6 +15,6 @@ const upload = multer({ storage }); // 🔁 Cloudinary-based multer
 router.get('/', getAllProducts);
 router.get('/related/items', getRelatedProducts);
 router.get('/:id', getProductById);
-router.post('/', upload.single('image'), addProduct);
+// router.post('/', upload.single('image'), addProduct);
 
 export default router;
