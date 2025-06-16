@@ -1,43 +1,91 @@
+
 import express from 'express';
-import verifyFirebaseToken from '../middleware/firebaseAuth.js';
+import admin from 'firebase-admin';
+import User from '../models/User.js';
 
 const router = express.Router();
 
-router.post('/login', verifyFirebaseToken, (req, res) => {
-  // Now you can safely access req.user
-  const user = req.user;
-  console.log('Logged in user:', user);
+router.post('/sync', async (req, res) => {
+  const idToken = req.headers.authorization?.split('Bearer ')[1];
 
-  // You can now check if user exists in DB, create user, return data, etc.
-  res.status(200).json({ message: 'Login successful', user });
-});
-
-router.post("/signup", async (req, res) => {
-  const { uid, email, name, provider } = req.body;
-  const idToken = req.headers.authorization?.split("Bearer ")[1];
-
-  if (!idToken) return res.status(401).json({ message: "No token provided" });
+  if (!idToken) {
+    return res.status(401).json({ message: 'No token provided' });
+  }
 
   try {
-    // Verify Firebase token
     const decodedToken = await admin.auth().verifyIdToken(idToken);
-    if (!decodedToken.email_verified) {
-      return res.status(403).json({ message: "Email not verified" });
+    console.log("Decoded Token:", decodedToken);
+
+
+    const firebaseUID = decodedToken.uid;
+    const { email, name, provider } = req.body;
+    console.log("Body:", req.body);
+
+
+const provider_id = decodedToken.firebase?.sign_in_provider || provider || 'unknown';
+
+    if (provider_id === 'password' && !decodedToken.email_verified) {
+      return res.status(403).json({ message: 'Email not verified' });
     }
 
-    // Upsert user in DB
-    const user = await User.findOneAndUpdate(
-      { uid },
-      { email, name, provider },
-      { upsert: true, new: true }
-    );
+    const finalName = name?.trim() || (email ? email.split('@')[0] : 'New User');
 
-    res.status(200).json({ message: "User signed up successfully", user });
+
+    const user = await User.findOneAndUpdate(
+  { firebaseUID },
+  {
+    firebaseUID,
+    email,
+    name: finalName,
+    provider: provider || 'unknown',
+  },
+  { upsert: true, new: true }
+);
+
+
+    res.status(200).json({ message: 'User synced with DB', user });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server error during signup" });
+    res.status(500).json({ message: 'Server error during sync' });
   }
 });
+
+// router.post('/sync', async (req, res) => {
+//   const idToken = req.headers.authorization?.split('Bearer ')[1];
+//   if (!idToken) {
+//     return res.status(401).json({ message: 'No token provided' });
+//   }
+
+//   try {
+//     const decodedToken = await admin.auth().verifyIdToken(idToken);
+
+//     const firebaseUID = decodedToken.uid;
+//     const email = decodedToken.email;
+//     const emailVerified = decodedToken.email_verified;
+//     const name = decodedToken.name || req.body.name || 'New User';
+//     const provider_id = decodedToken.firebase?.sign_in_provider || 'unknown';
+
+//     if (provider_id === 'password' && !emailVerified) {
+//       return res.status(403).json({ message: 'Email not verified' });
+//     }
+
+//     const user = await User.findOneAndUpdate(
+//       { firebaseUID },
+//       {
+//         firebaseUID,
+//         email,
+//         name,
+//         provider: provider_id,
+//       },
+//       { upsert: true, new: true }
+//     );
+
+//     res.status(200).json({ message: 'User synced with DB', user });
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ message: 'Server error during sync' });
+//   }
+// });
 
 
 export default router;
