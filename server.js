@@ -16,12 +16,11 @@ const __dirname = path.dirname(__filename);
 // Load the service account key manually from file
 let serviceAccount;
 try {
-  serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON);
 
   admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
+    credential: admin.credential.cert(JSON.parse(fs.readFileSync(process.env.GOOGLE_APPLICATION_CREDENTIALS,'utf-8'))),
   });
-  
+
   console.log('✅ Firebase Admin initialized from ENV');
 } catch (error) {
   console.error('❌ Failed to initialize Firebase Admin SDK:', error.message);
@@ -45,7 +44,9 @@ import userRoutes from './routes/userRoutes.js';
 import cartRoutes from './routes/cartRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
 import auth from './routes/auth.js'
+import adminRoutes from './routes/adminRoutes.js';
 
+app.use('/api/admin', adminRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/cart', cartRoutes);

@@ -255,3 +255,67 @@ export const deleteOrder = async (req, res) => {
     return res.status(500).json({ message: "Error deleting the order" });
   }
 };
+
+// export const getAllOrders = async (req, res) => {
+//   try {
+//     const orders = await Order.find().sort({ createdAt: -1 }).populate('products.productId userId');
+//     res.status(200).json({ orders });
+//   } catch (error) {
+//     console.error("Error fetching all orders:", error);
+//     res.status(500).json({ message: "Internal Server Error" });
+//   }
+// };
+
+// GET /api/orders/all
+// export const getAllOrders = async (req, res) => {
+//   try {
+//     const orders = await Order.find()
+//       .populate('products.productId') // This is OK because productId is an ObjectId
+//       .sort({ createdAt: -1 });
+
+//     res.json(orders);
+//   } catch (err) {
+//     console.error("Error fetching all orders:", err);
+//     res.status(500).json({ message: "Error fetching orders" });
+//   }
+// };
+
+// export const getAllOrders = async (req, res) => {
+//   try {
+//     const orders = await Order.find()
+//       .populate('products.productId')
+//       .sort({ createdAt: -1 })
+//       .lean();
+
+//     // Manually look up Users
+//     for (const order of orders) {
+//       const user = await User.findOne({ firebaseUID: order.userId });
+//       order.user = user;
+//     }
+
+//     res.json(orders);
+//   } catch (err) {
+//     console.error("Error fetching all orders:", err);
+//     res.status(500).json({ message: "Error fetching orders" });
+//   }
+// };
+
+export const getAllOrders = async (req, res) => {
+  try {
+    const orders = await Order.find()
+      .populate('products.productId') // Only populate product data, not userId
+      .sort({ createdAt: -1 });
+
+    return res.status(200).json({
+      status: "success",
+      message: "Orders fetched successfully",
+      orders,
+    });
+  } catch (err) {
+    console.error("Error fetching all orders:", err);
+    return res.status(500).json({
+      status: "error",
+      message: "Error fetching orders",
+    });
+  }
+};
