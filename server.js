@@ -16,9 +16,9 @@ const __dirname = path.dirname(__filename);
 // Load the service account key manually from file
 let serviceAccount;
 try {
-
+serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON);
   admin.initializeApp({
-    credential: admin.credential.cert(JSON.parse(fs.readFileSync(process.env.GOOGLE_APPLICATION_CREDENTIALS,'utf-8'))),
+    credential: admin.credential.cert(serviceAccount),
   });
 
   console.log('✅ Firebase Admin initialized from ENV');
