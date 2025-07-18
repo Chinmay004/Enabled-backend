@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
     zip: String,
     country: String,
   },
+  provider: { type: String }, 
   isAdmin: { type: Boolean, default: false }
 }, { timestamps: true });
 

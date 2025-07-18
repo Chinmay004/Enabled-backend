@@ -19,7 +19,7 @@ async function runMigration() {
     console.log(`✅ Updated ${res1.modifiedCount} users to isAdmin:false`);
 
     // 2. Promote yourself
-    const myEmail = "chinmaybadwaik9@gmail.com";
+    const myEmail = "admin@gmail.com";
     const res2 = await User.updateOne(
       { email: myEmail },
       { $set: { isAdmin: true } }
