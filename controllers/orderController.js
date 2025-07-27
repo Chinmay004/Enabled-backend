@@ -74,7 +74,7 @@
 
 //     console.log("✅ WhatsApp sendOrderWhatsapp function completed");
 
-    
+
 
 //     res.status(201).json({ message: "Order placed successfully", order: newOrder });
 //   } catch (error) {
@@ -151,6 +151,16 @@ export const placeOrder = async (req, res) => {
 
     console.log("✅ Cart found with items");
 
+    // Check stock for each product before placing order
+    for (const item of userCart.items) {
+      const product = item.productId;
+      if (product.countInStock !== null && item.quantity > product.countInStock) {
+        return res.status(400).json({
+          message: `Product '${product.name}' is out of stock or does not have enough stock. Available: ${product.countInStock}`
+        });
+      }
+    }
+
     // Prepare order products
     const products = userCart.items.map((item) => ({
       productId: item.productId._id,
@@ -176,6 +186,15 @@ export const placeOrder = async (req, res) => {
     await newOrder.save();
     console.log("📝 Order saved successfully:", newOrder._id);
 
+    // Decrement stock for each product (if countInStock is not null)
+    for (const item of userCart.items) {
+      const product = item.productId;
+      if (product.countInStock !== null) {
+        product.countInStock -= item.quantity;
+        await product.save();
+      }
+    }
+
     // Clear the cart
     await Cart.deleteMany({ userId });
     console.log("🛒 Cart cleared after placing order");
@@ -189,14 +208,14 @@ export const placeOrder = async (req, res) => {
       ${address.country || "Indonesia"}
           `.trim();
 
-          const orderDetails = {
-            products: products.map(p => `${p.name} (x${p.quantity})`).join('\n'), // New line between products
-            quantity: products.reduce((sum, p) => sum + p.quantity, 0),
-            totalPrice: totalPrice,
-            customerName: customerName || address.fullName || "Unknown Customer",
-            customerEmail: address.email || "No email",
-            address: addressText,
-          };
+    const orderDetails = {
+      products: products.map(p => `${p.name} (x${p.quantity})`).join('\n'), // New line between products
+      quantity: products.reduce((sum, p) => sum + p.quantity, 0),
+      totalPrice: totalPrice,
+      customerName: customerName || address.fullName || "Unknown Customer",
+      customerEmail: address.email || "No email",
+      address: addressText,
+    };
 
     console.log("📦 Sending order details to WhatsApp:", orderDetails);
 
