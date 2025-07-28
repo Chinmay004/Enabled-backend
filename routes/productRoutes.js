@@ -6,7 +6,8 @@ import {
   getProductById,
   addProduct,
   getRelatedProducts,
-  updateProduct
+  updateProduct,
+  deleteProduct
 } from '../controllers/productController.js';
 
 const router = express.Router();
@@ -18,5 +19,6 @@ router.get('/related/items', getRelatedProducts);
 router.get('/:id', getProductById);
 router.post('/', upload.single('image'), addProduct);
 router.put('/:id', upload.single('image'), updateProduct);
+router.delete('/:id', deleteProduct);
 
 export default router;
